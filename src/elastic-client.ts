@@ -105,7 +105,7 @@ export class ElasticClient {
           Authorization: host.Authorization,
         }
       }
-      const fetchUrl = `${host.host}${urlWithoutHost}`
+      const fetchUrl = `${host.protocol}//${host.host}${urlWithoutHost}`
 
       try {
         const response = await this.#fetch(fetchUrl, options)
